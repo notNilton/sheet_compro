@@ -91,10 +91,11 @@ def ordenar_xlsx_por_coluna(arquivo_xlsx, nome_coluna):
         logging.error(f"Erro: Arquivo '{arquivo_xlsx}' não encontrado.")
 
 # Exemplo de uso:
-arquivo1 = 'relacao_servidores.csv'
-arquivo2 = 'processos_completo.csv'
-arquivo_saida = 'processos_verificados.csv'
-arquivo_xlsx_saida = 'processos_verificados.xlsx'
+arquivo1 = './planilhas_tratadas/pgenet_emails.csv'
+arquivo2 = './planilhas_tratadas/pgenet_usuarios.csv'
 
-comparar_arquivos_csv(arquivo1, 'NOME', arquivo2, 'NOME_PARTE_ATIVA', arquivo_saida)
+arquivo_saida = './planilhas_resultados/pgenet_emails_usuarios.csv'
+arquivo_xlsx_saida = './planilhas_resultados/pgenet_emails_usuarios.xlsx'
+
+comparar_arquivos_csv(arquivo1, 'NOME_E', arquivo2, 'NOME', arquivo_saida)
 ordenar_xlsx_por_coluna(arquivo_xlsx_saida, 'NOME')
